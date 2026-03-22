@@ -1,0 +1,149 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family: Arial; background:#1f2235; color:white;}
+
+    .container {width:90%; margin:auto;}
+
+    .nav {display:flex; justify-content:space-between; padding:20px 0;}
+    .nav a {color:white; text-decoration:none; margin:0 10px;}
+
+    .hero {display:flex; align-items:center; justify-content:space-between; padding:50px 0;}
+    .hero-text h1 {font-size:40px; margin:10px 0;}
+    .hero-text p {margin:10px 0; color:#ccc;}
+
+    .btn {background:#ff6b4a; padding:10px 20px; color:white; border:none; cursor:pointer; display:inline-block; text-decoration:none;}
+
+    .hero img {width:250px; border-radius:10px;}
+
+    .section {padding:50px 0;}
+
+    .grid-2 {display:flex; gap:30px;}
+
+    .card {background:#2c2f48; padding:20px; border-radius:10px; margin-bottom:15px;}
+
+    .education {display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+
+    .contact {display:flex; gap:30px;}
+    input, textarea {width:100%; padding:10px; margin:10px 0; border:none;}
+
+    html {scroll-behavior:smooth;}
+
+    
+
+    @media(max-width:768px){
+        .hero, .grid-2, .contact {flex-direction:column;}
+        .education {grid-template-columns:1fr;}
+    }
+/*link colour changed again earlier not working now its working as desrired*/
+    a:link {
+    color: pink;      
+}
+
+a:visited {
+    color: pink;     
+}
+
+
+
+/*btn again added as earlier one not working*/
+.btn {
+    background: #ff6b4a;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e85c3d;
+    transform: translateY(-3px);
+}
+h2{color: aquamarine;}
+
+
+h3{color: #4db8ff;}
+
+
+
+/*hivering effect added to make it more good ref mdn,google*/
+
+.card {
+    transform: translateY(20px);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    opacity: 1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+
+.section {
+    transition: all 0.4s ease;
+}
+
+
+.section:target {
+    transform: translateY(-15px);
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+}
+
+
+.section:target h2 {
+    color: #ff6b4a;
+}
+
+/*top button added as site was too much getting mashup because of hovering effecting used ref workschool,google,mdn*/
+
+.top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff6b4a;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+
+.top-btn:hover {
+    background: #e85c3d;
+    transform: translateY(-5px);
+}
+
+/*mobile site not wokring fixed it ref mdn , work school */
+@media(max-width:768px){
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav h2 {
+        font-size: 20px;
+    }
+
+    .nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 6px;
+        background: #2c2f48;
+    }
+}
